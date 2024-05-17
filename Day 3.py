@@ -1,4 +1,42 @@
 # Completed
+
+def death():
+    print('''
+                                ___-----------___
+                            __--~~                 ~~--__
+                        _-~~                             ~~-_
+                    _-~                                     ~-_
+                    /                                           \
+                |                                             |
+                |                                               |
+                |                                               |
+                |                                                 |
+                |                                                 |
+                |                                                 |
+                |                                               |
+                |  |    _-------_               _-------_    |  |
+                |  |  /~         ~\           /~         ~\  |  |
+                ||  |             |         |             |  ||
+                || |               |       |               | ||
+                || |              |         |              | ||
+                |   \_           /           \           _/   |
+                |      ~~--_____-~    /~V~\    ~-_____--~~      |
+                |                    |     |                    |
+                |                    |       |                    |
+                |                    |  /^\  |                    |
+                |                    ~~   ~~                    |
+                \_         _                       _         _/
+                    ~--____-~ ~\                   /~ ~-____--~
+                        \     /\                 /\     /
+                        \    | ( ,           , ) |    /
+                            |   | (~(__(  |  )__)~) |   |
+                            |   \/ (  (~~|~~)  ) \/   |
+                            |   |  [ [  |  ] ]  /   |
+                            |                     |         
+                                \                   /
+                                ~-_             _-~
+                                    ~--___-___--~
+        ''')
 print('''
 *******************************************************************************
           |                   |                  |                     |
@@ -34,6 +72,7 @@ if direction=="left":
         action=input("Do you want to swim or continue waiting for a boat? ").lower()
         if action == "swim" or action == "no":
             print("You attempt to swim across the river, but you can't swim.\n You Drown\nGAME OVER!!!")
+            death()
         else:
             print("A boat arrives, they ask you how long you've been waiting.\nYou tell them it's been a while.\nThey offer you a free ride across the river.")
             action=input("Do you get on the boat? ").lower()
@@ -45,21 +84,31 @@ if direction=="left":
                     color=input("Which color do you choose? ").lower()
                     if color == "red":
                         print("You walk down the path and fall into a pitfall.\nGAME OVER!!!")
+                        death()
                     elif color == "blue":
                         print("You walk down the path and find a room with a treasure chest.\nYou open the chest and find a lot of gold.\nYOU WIN!!!")
                     elif color == "yellow":
                         print("You walk down the path and find a room with a dragon.\nYou get eaten by the dragon.\nGAME OVER!!!")
+                        death()
                 else:
                     print("You choose not to enter the cave and go roaming around.\nYou see a house.")
                     action=input("Do you want to enter the house? ").lower()
                     if action=="yes":
                         print("You enter the house and find a witch.\nShe turns you into a frog.\nGAME OVER!!!")
+                        death()
                     else:
                         print("You lose interest in the island and head back to the crossroad\nYou choose to go right.")
                         print("You walk for a bit.\nOOPS!!! You fell into a pitfall and died.\nGoing out the way you came in.\nGAME OVER!!!")
+                        death()
             else:
                 print("You refuse the boat ride and continue waiting.\nYou wait for a long time and die of starvation.\nGAME OVER!!!")
+                death()
     elif action == "swim":
         print("You attempt to swim across the river, but you can't swim.\n You Drown\nGAME OVER!!!")
+        death()
 else:
     print("You walk for a bit.\nOOPS!!! You fell into a pitfall and died.\nGoing out the way you came in.\nGAME OVER!!!")
+    death()
+
+
+
