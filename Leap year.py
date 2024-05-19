@@ -37,6 +37,7 @@ else:
         
 # =========================================================================================================
 # Clean uncommented code
+"""
 year = int(input())
 x=0
 y=0
@@ -59,3 +60,4 @@ else:
             print("Not leap year")
     else:
         print("Not leap year")
+"""
