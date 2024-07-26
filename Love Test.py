@@ -1,5 +1,5 @@
 # Completed
-
+value=0
 print("The Love Calculator is calculating your score...")
 name1 = input() # What is your name?
 name2 = input() # What is their name?
@@ -18,6 +18,7 @@ y+=name.count("v")
 y+=name.count("e")
 # Concatonate the two numbers
 string=str(x)+str(y)
+value=int(string)
 # Output the result
 print(int(string))
 # Interpretation of the result
